@@ -3,14 +3,14 @@ import { UsuarioModule } from './usuario/usuario.module';
 import { ProdutoModule } from './produto/produto.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PostegresConfigService } from './config/postegres.config.service';
-import { ConfigModule } from "@nestjs/config";
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
     UsuarioModule,
     ProdutoModule,
     ConfigModule.forRoot({
-      isGlobal:true
+      isGlobal: true,
     }),
     TypeOrmModule.forRootAsync({
       useClass: PostegresConfigService,
