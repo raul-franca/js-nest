@@ -1,10 +1,10 @@
 import {
+  Entity,
   Column,
   CreateDateColumn,
-  DeleteDateColumn,
-  Entity,
-  PrimaryGeneratedColumn,
   UpdateDateColumn,
+  DeleteDateColumn,
+  PrimaryGeneratedColumn,
 } from 'typeorm';
 
 @Entity({ name: 'usuarios' })
@@ -15,18 +15,18 @@ export class UsuarioEntity {
   @Column({ name: 'nome', length: 100, nullable: false })
   nome: string;
 
-  @Column({ name: 'email', length: 100, nullable: false })
+  @Column({ name: 'email', length: 70, nullable: false })
   email: string;
 
   @Column({ name: 'senha', length: 255, nullable: false })
   senha: string;
 
-  @CreateDateColumn({ name: 'create_at' })
-  createAt: string;
+  @CreateDateColumn({ name: 'created_at' })
+  createdAt: string;
 
-  @UpdateDateColumn({ name: 'update_at' })
-  updateAt: string;
+  @UpdateDateColumn({ name: 'updated_at' })
+  updatedAt: string;
 
-  @DeleteDateColumn({ name: 'delete_at' })
-  deleteAt: string;
+  @DeleteDateColumn({ name: 'deleted_at' })
+  deletedAt: string;
 }

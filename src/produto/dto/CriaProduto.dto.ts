@@ -5,7 +5,6 @@ import {
   IsNotEmpty,
   IsNumber,
   IsString,
-  isURL,
   IsUrl,
   IsUUID,
   MaxLength,
@@ -24,7 +23,6 @@ export class CaracteristicaProdutoDTO {
 }
 
 export class ImagemProdutoDTO {
-  @IsString()
   @IsNotEmpty({ message: 'URL para imagem inválida' })
   url: string;
 
